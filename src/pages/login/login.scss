@@ -1,10 +1,14 @@
 page-login {
+    .scroll-content{
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
     .conteudo{
         background-color: #E6E7E8;
         padding: 30px;
-    }
-    .topo{
-        background-color: #E6E7E8;
     }
     .camposlogin{
         background-color: #E6E7E8;
@@ -24,11 +28,6 @@ page-login {
     }
     .image{
         width:300px;
-    }
-    .button{
-        width: 100%;
-        text-align:right;
-        padding: 26px;
     }
     .linha1{
         width:35%;

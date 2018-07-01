@@ -9,29 +9,42 @@ import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 
 import { IntroPageModule } from '../pages/intro/intro.module';
+import { ConfigProvider } from '../providers/config/config';
+
+import { SQLite } from '@ionic-native/sqlite';
+import { DatabaseProvider } from '../providers/database/database';
+
+import {Http, HttpModule} from '@angular/http';
+import { CadastroPage } from '../pages/cadastro/cadastro';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    CadastroPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    IntroPageModule
+    IntroPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    CadastroPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ConfigProvider,
+    SQLite,
+    DatabaseProvider
   ]
 })
 export class AppModule {}

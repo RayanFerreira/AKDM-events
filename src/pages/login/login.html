@@ -8,26 +8,32 @@
 
 <ion-content class="conteudo" padding>
 
-
-  <img src="/assets/imgs/logo.png">
-  <br>
-  <br>
-  <br>
-  <div class="texto_acima">Nome de Usuario</div>
-  <ion-input id=1 class="campos"></ion-input>
-  <br>
-  <div class="texto_acima">Senha</div>
-  <ion-input id=2 class="campos" type="password"></ion-input>
-  <div class="button">
-    <button ion-button item-right (click)="Logar()">Entrar</button>
-  <br>
-  <br>
-  <div class="linha1"></div>
-  <div class="textoentre">ou</div>
-  <div class="linha2"></div>
-  <br>
-    <button ion-button item-right (click)="EntrarFace()">Entrar com Facebook</button>
-  <br>
-    <button ion-button item-right (click)="EntraLinke()">Entrar com LinkedIN</button>
-  </div>
+  <ion-card-content>
+    <ion-list no-line>
+      <img src="/assets/imgs/logo.png">
+      <br>
+      <br>
+      <div class="texto_acima">Nome de Usuario</div>
+      <ion-input class="campos" [(ngModel)]="usuario"></ion-input>
+      <div class="texto_acima">Senha</div>
+      <ion-input class="campos" type="password" [(ngModel)]="senha"></ion-input>
+      <a>Esqueceu sua senha ?</a>
+      <br>
+      <a (click)="MostraCadastro()">Cadastre-se</a>
+        <button ion-button block (click)="login(usuario,senha)">Entrar</button>
+        <br>
+        <br>
+        <div class="linha1"></div>
+        <div class="textoentre">ou</div>
+        <div class="linha2"></div>
+        <br>
+        <br>
+        <button ion-button block color="facebook">
+          <ion-icon name="logo-facebook"></ion-icon> Entrar com Facebook
+        </button>
+        <button ion-button block color="facebook">
+          <ion-icon name="logo-linkedin"></ion-icon> Entrar com LinkedIN
+        </button>
+    </ion-list>
+  </ion-card-content>
 </ion-content>
