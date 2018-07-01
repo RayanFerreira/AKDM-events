@@ -19,6 +19,10 @@
     <ion-input class="campos" [(ngModel)]="usuario"></ion-input>
     <div class="texto_acima">Senha</div>
     <ion-input class="campos" type="password" [(ngModel)]="senha"></ion-input>
+    <div class="texto_acima">Email</div>
+    <ion-input class="campos" [(ngModel)]="email"></ion-input>
+    <div class="texto_acima">Telefone</div>
+    <ion-input class="campos" type="tel" [(ngModel)]="tel"></ion-input>
       <button ion-button block (click)="CriaUsuario(usuario,senha)">Cadastrar</button>
     </ion-card-content>
 

@@ -17,13 +17,19 @@ import { DatabaseProvider } from '../providers/database/database';
 import {Http, HttpModule} from '@angular/http';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 
+import {Facebook} from '@ionic-native/facebook';
+import { TabsPage } from '../pages/tabs/tabs';
+import { FeedPage } from '../pages/feed/feed';
+
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     LoginPage,
-    CadastroPage
+    CadastroPage,
+    HomePage,
+    TabsPage,
+    FeedPage
   ],
   imports: [
     BrowserModule,
@@ -34,9 +40,11 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
     LoginPage,
-    CadastroPage
+    CadastroPage,
+    HomePage,
+    TabsPage,
+    FeedPage
   ],
   providers: [
     StatusBar,
@@ -44,7 +52,8 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ConfigProvider,
     SQLite,
-    DatabaseProvider
+    DatabaseProvider,
+    Facebook
   ]
 })
 export class AppModule {}

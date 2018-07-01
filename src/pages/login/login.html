@@ -20,20 +20,23 @@
       <a>Esqueceu sua senha ?</a>
       <br>
       <a (click)="MostraCadastro()">Cadastre-se</a>
-        <button ion-button block (click)="login(usuario,senha)">Entrar</button>
-        <br>
-        <br>
-        <div class="linha1"></div>
-        <div class="textoentre">ou</div>
-        <div class="linha2"></div>
-        <br>
-        <br>
-        <button ion-button block color="facebook">
-          <ion-icon name="logo-facebook"></ion-icon> Entrar com Facebook
-        </button>
-        <button ion-button block color="facebook">
-          <ion-icon name="logo-linkedin"></ion-icon> Entrar com LinkedIN
-        </button>
+      <button ion-button block (click)="login(usuario,senha)">Entrar</button>
+      <br>
+      <br>
+      <div class="linha1"></div>
+      <div class="textoentre">ou</div>
+      <div class="linha2"></div>
+      <br>
+      <br>
+      <button ion-button block color="facebook" (click)="goHomeFB()">
+        <ion-icon name="logo-facebook"></ion-icon> Entrar com Facebook
+      </button>
+      <button ion-button block color="facebook" (click)="LoginLK()">
+        <ion-icon name="logo-linkedin"></ion-icon> Entrar com LinkedIN
+      </button>
     </ion-list>
   </ion-card-content>
+
+
+
 </ion-content>

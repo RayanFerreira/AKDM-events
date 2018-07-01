@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-
+import {Facebook,FacebookLoginResponse} from '@ionic-native/facebook';
 let config_key_name = "config";
 /*
   Generated class for the ConfigProvider provider.
@@ -10,9 +10,9 @@ let config_key_name = "config";
 @Injectable()
 export class ConfigProvider {
 
-  
+  userData;
 
-  constructor() {
+  constructor(private facebook: Facebook) {
 
   }
   //recebe os dados do localstorage
@@ -47,5 +47,7 @@ export class ConfigProvider {
   login(c){
     
   }
+
+  
 
 }

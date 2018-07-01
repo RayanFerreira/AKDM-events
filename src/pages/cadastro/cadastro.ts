@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DatabaseProvider } from '../../providers/database/database';
-import { HomePage } from '../home/home';
 
 /**
  * Generated class for the CadastroPage page.
@@ -26,10 +25,10 @@ export class CadastroPage {
     console.log('ionViewDidLoad CadastroPage');
   }
 
-  CriaUsuario(usuario,senha){
-    this.dbProvider.CriaUsuario(usuario,senha);
-    if(this.dbProvider.CriaUsuario(usuario,senha)){
-      this.navCtrl.push(HomePage);
-    }
-  }
+  //CriaUsuario(usuario,senha){
+    //this.dbProvider.CriaUsuario(usuario,senha);
+    //if(this.dbProvider.CriaUsuario(usuario,senha)){
+      //this.navCtrl.push(HomePage);
+   // }
+  //}
 }
