@@ -47,13 +47,15 @@ export class LoginPage {
 
   MostraCadastro(){
     this.navCtrl.push(CadastroPage);
-      this.navCtrl.push(TabsPage);
+      
   }
 
   goHomeFB(){
     this.navCtrl.push(HomePage);
     this.navCtrl.push(TabsPage);
   }
+
+  
 
 }
 export class users {

@@ -22,7 +22,7 @@ export class CadastroPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CadastroPage');
+    
   }
 
   //CriaUsuario(usuario,senha){
